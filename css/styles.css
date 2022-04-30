@@ -22,8 +22,6 @@
 
 .slider {
   background: white;
-  -webkit-box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-          box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   height: 120px;
   margin: auto;
   margin-top: 20px;
@@ -87,7 +85,7 @@ html {
   scroll-behavior: smooth;
 }
 
-header {
+header- {
   position: absolute;
   z-index: 5;
   width: 420px;
