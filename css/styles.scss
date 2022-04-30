@@ -3,19 +3,19 @@
 	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
 }
 
-$animationSpeed: 40s;
+$animationSpeed: 120s;
 
 // Animation
 @keyframes scroll {
 	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-250px * 7))}
+	100% { transform: translateX(calc(-1150px * 7))}
 }
 
 
 // Styling
 .slider {
 	background: white;
-	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
 	height: 120px;
 	margin: auto;
     margin-top: 20px;
@@ -24,7 +24,7 @@ $animationSpeed: 40s;
 	width:100%;
     display: flex;
     align-items: center;
-	
+
 	&::before,
 	&::after {
 		@include white-gradient;
@@ -34,7 +34,7 @@ $animationSpeed: 40s;
 		width: 200px;
 		z-index: 2;
 	}
-	
+
 	&::after {
 		right: 0;
 		top: 0;
@@ -45,18 +45,22 @@ $animationSpeed: 40s;
 		left: 0;
 		top: 0;
 	}
-	
+
 	.slide-track {
 		animation: scroll $animationSpeed linear infinite;
 		display: flex;
 		width: calc(250px * 14);
 	}
-	
+
 	.slide {
-		height: 100px;
-		width: auto;
+		// max-width: 300PX;
+		max-height: 100PX;
         margin-left: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
+
 }
 
 html{
@@ -76,14 +80,14 @@ header
 }
 
 h1{
-	
+
 	font-size:36px;
 	letter-spacing:-2.5px;
 	margin-left:30px;
 }
 
 h3{
-	
+
 	font-size:16px;
 	letter-spacing:-1.5px;
 	margin-top:5px;
@@ -98,7 +102,7 @@ h3{
 
 a
 {
-	
+
 	color:rgba( 255, 255, 255, .65 );
 	text-decoration: none;
 }
@@ -108,7 +112,7 @@ a:hover
 	color:rgba( 255, 255, 255, 1 );
 }
 
-/* hardware accelatator class */	
+/* hardware accelatator class */
 	.trans3d
 	{
 		-webkit-transform-style: preserve-3d;
@@ -120,7 +124,7 @@ a:hover
 		transform-style:preserve-3d;
 		transform: translate3d(0, 0, 0);
 	}
-	
+
 	#contentContainer
 	{
 		position:absolute;
@@ -131,7 +135,7 @@ a:hover
 		width:1000px;
 		height:1000px;
 	}
-	
+
 	#carouselContainer
 	{
 		position:absolute;
@@ -142,7 +146,7 @@ a:hover
 		width:1000px;
 		height:1000px;
 	}
-	
+
 	.carouselItem
 	{
 		width:320px;
@@ -154,7 +158,7 @@ a:hover
 		margin-top:-90px;
 		visibility:hidden;
 	}
-	
+
 	.carouselItemInner
 	{
 		width:320px;
@@ -170,7 +174,7 @@ a:hover
 		margin-top:-90px;
 		text-align:center;
 		padding-top:-50px;
-		
+
 	}
 
 .wspfloat{
