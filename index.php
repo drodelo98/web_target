@@ -1,3 +1,6 @@
+<?php
+include 'lanConfig.php';
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,7 +14,7 @@
     <link rel="stylesheet" href="lib/bootstrapvalidator-dist-0.5.3/css/bootstrapValidator.min.css" />
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="./css/img/favicon.png" type="image/x-icon">
-    <title>TARGETSOFTDECOLOMBIA - Software para patología y citología</title>
+    <title>TARGETSOFTDECOLOMBIA - <?= $title['title'] ?></title>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -38,38 +41,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <li class="nav-item active">
                     <a class="nav-link" href="#home">
                       <i class="fas fa-home"></i>
-                      <p>Inicio</p>
+                      <p><?= $nav['li1']?></p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#product">
                       <i class="fas fa-microscope"></i>
-                      <p>QHORTE</p>
+                      <p><?= $nav['li2']?></p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#customers">
                       <i class="fa-solid fa-people-group"></i>
-                      <p>Clientes</p>
+                      <p><?= $nav['li3']?></p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#plan">
                       <i class="fas fa-tags"></i>
-                      <p>Planes</p>
+                      <p><?= $nav['li4']?></p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#about">
                       <i class="fas fa-user-astronaut"></i>
-                      <p>Nosotros</p>
+                      <p><?= $nav['li5']?></p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#contact">
                       <i class="fas fa-mobile-alt"></i>
-                      <p>Contáctenos</p>
+                      <p><?= $nav['li6']?></p>
                     </a>
+                  </li>
+                  <li class="nav-item">
+                  <div class="btn-group">
+                  <button class="btn btn-secondary btn-sm dropdown-toggle lan-button" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <?= $_SESSION['lang']?>
+                  </button>
+                  <div class="dropdown-menu">
+                  <a class="dropdown-item" href="?lang=es">Español</a>
+                  <a class="dropdown-item" href="?lang=en">Ingles</a>
+                  </div>
+                  </div>
                   </li>
                 </ul>
           </div>
@@ -91,8 +105,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="row">
                       <div class="col-md-12 text-right">
                         
-                        <h1>Resultados en tiempo real</h1>
-                        <h5>y una completa trazabilidad del paciente</h5>
+                        <h1><?= $carousel_page['h1-1'] ?></h1>
+                        <h5><?= $carousel_page['h5-1'] ?></h5>
                        
                         <div id="contentContainer" class="trans3d"> 
                           <section id="carouselContainer" class="trans3d">
@@ -119,8 +133,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <div class="container">
                     <div class="row">
                       <div class="col-md-7 text-left">
-                        <h1 class="title" style="color: #ffb833;font-weight: 500;">Una nueva experiencia en la gestión de laboratorios de patología y citología cervico-uterina.</h1>
-                        <h5>No hay excusas, es tiempo de subirse en la nube. Rastree la ubicación de las muestras ingresadas al laboratorio.</h5>
+                        <h1 class="title" style="color: #ffb833;font-weight: 500;"><?= $carousel_page['h1-2'] ?></h1>
+                        <h5><?= $carousel_page['h5-2'] ?></h5>
                         <br/>
                       </div>
                     </div>
@@ -134,8 +148,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <div class="container">
                     <div class="row">
                       <div class="col-md-7" style="margin-top:-300px;margin-left:200px;">>
-                        <h2 class="title" style="color: #ffb833;font-weight: 500;">Optimiza el home office</h2>
-                        <h5>Brinde a sus colaboradores una herramienta que permita el TELETRABAJO desde la seguridad de sus hogares</h5>
+                        <h2 class="title" style="color: #ffb833;font-weight: 500;"><?= $carousel_page['h1-3'] ?></h2>
+                        <h5><?= $carousel_page['h5-3'] ?></h5>
                       </div>
                     </div>
                   </div>
@@ -165,15 +179,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <i class="far fa-lightbulb"></i>
               </div>
             </div>
-            <a href="https://wa.me/573155339530?text=Me%20gustaria%20recibir%20mas%20informacion%20acerca%20de%20%20QHORTE" class="wspfloat" target="_blank"><i class="fa fa-whatsapp my-wspfloat"></i></a>
-            <h2 class="title">Por que es la mejor solución para su laboratorio</h2>
-            <h5>QHORTE es una herramienta software para el apoyo en el diagnóstico de cancer y seguimiento a pacientes en fase precancerosa o in situ.</h5>
+            <a href="https://wa.me/573132359308?text=Me%20gustaria%20recibir%20mas%20informacion%20acerca%20de%20%20QHORTE" class="wspfloat" target="_blank"><i class="fa fa-whatsapp my-wspfloat"></i></a>
+            <h2 class="title"><?= $product['title']?></h2>
+            <h5><?= $product['h5-title']?></h5>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 text-justify">
-            <p>El esfuerzo de los laboratorios está orientado a asegurar un resultado clínico de calidad. Esto implica que los procesos deban ser trazables,
-            eficientes, eficaces, oportunos y auditables que garanticen la calidad y fiabilidad del diagnóstico. Estás son las características  con las que cuentan nuestras soluciones en pro de mejorar los estándares en la atención del paciente.</p>
+            <p><?= $product['p-title'] ?></p>
           </div>
         </div>
         <div class="row">
@@ -183,8 +196,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <i class="fas fa-cloud"></i>
               </div>
               <div class="description">
-                <h4 class="info-title">Acceso en la nube</h4>
-                <p class="text-justify">Nuestra solución esta soportada en la nube de Amazon AWS, a la cual puedes ingresar desde cualquier navegador.</p>
+                <h4 class="info-title"><?= $product['h4-1'] ?></h4>
+                <p class="text-justify"><?= $product['p-1'] ?></p>
               </div>
             </div>
           </div>
@@ -194,8 +207,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <i class="fas fa-project-diagram"></i>
               </div>
               <div class="description">
-                <h4 class="info-title">Trazabilidad</h4>
-                <p class="text-justify">Ten control de todos los cambios que suceden a nivel de los datos del pacientes, la muestra y el resultado</p>
+                <h4 class="info-title"><?= $product['h4-2'] ?></h4>
+                <p class="text-justify"><?= $product['p-2'] ?></p>
               </div>
             </div>
           </div>
@@ -205,8 +218,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <i class="fas fa-chart-pie"></i>
               </div>
               <div class="description">
-                <h4 class="info-title">Indicadores</h4>
-                <p>Mide la oportunidad de la entrega del resultado, la concordancia del estudio (CX), el control de cambios, la productividad entre otros.</p>
+                <h4 class="info-title"><?= $product['h4-3'] ?></h4>
+                <p><?= $product['p-3'] ?></p>
               </div>
             </div>
           </div>
@@ -216,8 +229,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <i class="fas fa-tasks"></i>
               </div>
               <div class="description">
-                <h4 class="info-title">Gestión</h4>
-                <p>Gestiona los perfiles de los usuario de su organización, personaliza la aplicación configurando demograficos, filtros y reportes.</p>
+                <h4 class="info-title"><?= $product['h4-4'] ?></h4>
+                <p><?= $product['p-4'] ?>.</p>
               </div>
             </div>
           </div>
@@ -230,8 +243,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <i class="fas fa-fingerprint fingerprint"></i>
               </div>
               <div class="description">
-                <h4 class="info-title">Seguridad</h4>
-                <p class="description">Contamos con varios niveles de seguridad, disponemos de certificados SSL, ofuscación e encriptación de datos</p>
+                <h4 class="info-title"><?= $product['h4-5'] ?></h4>
+                <p class="description"><?= $product['p-5'] ?></p>
                 </div>
             </div>
           </div>
@@ -241,8 +254,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <i class="fas fa-barcode"></i>
               </div>
               <div class="description">
-                <h4 class="info-title">Tracking de la muestra</h4>
-                <p>Consulta el estado del especimen o muestra, su ubicación en el archivo y el tracking a partir de la lectura del codigo de barras</p>
+                <h4 class="info-title"><?= $product['h4-6'] ?></h4>
+                <p><?= $product['p-6'] ?></p>
               </div>
             </div>
           </div>
@@ -252,8 +265,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <i class="fas fa-chart-line"></i>
               </div>
               <div class="description">
-                <h4 class="info-title">Productividad</h4>
-                <p>Reduce tiempos de atención con las alertas de oportunidad, prioriza casos por su urgencia, mide la productividad de tu laboratorio</p>
+                <h4 class="info-title"><?= $product['h4-7'] ?></h4>
+                <p><?= $product['p-7'] ?></p>
                </div>
             </div>
           </div>
@@ -263,8 +276,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <i class="fas fa-code"></i>
               </div>
               <div class="description">
-                <h4 class="info-title">Integración</h4>
-                <p>Somos expertos en integrar nuestro sistema con la historia clínica. Hemos realizado proyectos basados en protocolos HL7, HL7 FHIR, ASTM, entre otros</p>
+                <h4 class="info-title"><?= $product['h4-8'] ?></h4>
+                <p><?= $product['p-8'] ?></p>
               </div>
             </div>
           </div>
@@ -279,9 +292,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="col-md-8 ml-auto mr-auto text-center">
             <div class="info">
             </div>
-            <h2 class="title">Nuestros clientes</h2>
-            <h5>Son más de 20 instituciones del sector público y privado que nos permiten se parte de su equipo de trabajo.
-              Con más de 500 usuarios activos.</h5>
+            <h2 class="title"><?= $customers['title'] ?></h2>
+            <h5><?= $customers['h5-title'] ?></h5>
           </div>
         </div>
         <div class="slider">
@@ -411,8 +423,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="container">
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto text-center">
-            <h2 class="title">Escoja el plan que mejor se ajuste a sus necesidades</h2>
-            <h5 class="description">Ofrecemos nuestra solución en la modalidad de Software como servicio (SaaS) a partir de una suscripción mensual por usuario</h5>
+            <h2 class="title"><?= $pricing['title'] ?></h2>
+            <h5 class="description"><?= $pricing['h5-title'] ?></h5>
           </div>
         </div>
         <div class="space-top"></div>
@@ -423,9 +435,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="card-icon">
                   <span class="icon-simple"><i class="fas fa-user-cog"></i></span>
                 </div>
-                <h4 class="card-title">Estandar</h4>
-                <h6 class="card-subtitle mb-2 text-muted">$13.9 us x usuario</h6>
-                <p class="card-text">Usuarios caracterizados como: Administradores del sistema, auxiliares clínicos u otro cargo operativo.</p>
+                <h4 class="card-title"><?= $pricing['h4-1'] ?></h4>
+                <h6 class="card-subtitle mb-2 text-muted"><?= $pricing['h6-1'] ?></h6>
+                <p class="card-text"><?= $pricing['p-1'] ?></p>
               </div>
             </div>
           </div>
@@ -435,9 +447,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="card-icon">
                   <span class="icon-simple"><i class="fas fa-microscope"></i></span>
                 </div>
-                <h4 class="card-title">Profesional</h4>
-                <h6 class="card-subtitle mb-2 text-muted">$19.9 us x usuario</h6>
-                <p class="card-text">Usuarios caracterizados como: Patólogos, Bacteriólogos, histólogos u otra especialidad médica.</p>
+                <h4 class="card-title"><?= $pricing['h4-2'] ?></h4>
+                <h6 class="card-subtitle mb-2 text-muted"><?= $pricing['h6-2'] ?></h6>
+                <p class="card-text"><?= $pricing['p-2'] ?></p>
               </div>
             </div>
           </div>
@@ -447,12 +459,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="card-icon">
                   <span class="icon-simple"><i class="fas fa-hospital"></i></span>
                 </div>
-                <h4 class="card-title">Consulta</h4>
-                <h6 class="card-subtitle mb-2 text-muted">$1.70 us x usuario</h6>
-                <p class="card-text mb-4">Usuarios caracterizados como: Entidades con un usuario de consulta web o app movil.</p>
-             
-              </div>
-              
+                <h4 class="card-title"><?= $pricing['h4-3'] ?></h4>
+                <h6 class="card-subtitle mb-2 text-muted"><?= $pricing['h6-3'] ?></h6>
+                <p class="card-text mb-4"><?= $pricing['p-3'] ?></p>             
+              </div>              
             </div>
           </div>
           <div class="col-md-3">
@@ -461,15 +471,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="card-icon">
                   <span class="icon-simple"><i class="fas fa-sms"></i></span>
                 </div>
-                <h6 class="card-category">Otros servicios</h6>
+                <h6 class="card-category"><?= $pricing['h6-4'] ?></h6>
                 <h3 class="card-title"></h3>
                 <ul class="text-white">
-                  <li>Gestion de documentos</li>
-                  <li>Gestion de imagenes</li>
-                  <li>Notificacion mediante SMS</li>
-                  <li>Pagina de consulta</li>
-                  <li>App para Android y IOS</li>
-                  <li>Integracion con H.C.</li>
+                  <li><?= $pricing['li-4_1'] ?></li>
+                  <li><?= $pricing['li-4_2'] ?></li>
+                  <li><?= $pricing['li-4_3'] ?></li>
+                  <li><?= $pricing['li-4_4'] ?></li>
+                  <li><?= $pricing['li-4_5'] ?></li>
+                  <li><?= $pricing['li-4_6'] ?></li>
                 </ul>
               </div>
             </div>
@@ -483,26 +493,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="container">
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto text-center">
-            <h2 class="title">Acerca de nosotros</h2>
+            <h2 class="title"><?= $about['title']?></h2>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 text-justify">
-            <p>TARGETSOFTDECOLOMBIA es una empresa especializada en el desarrollo de soluciones informáticas para el apoyo en el diagnóstico clínico. 
-            Integramos plataformas, analizadores biomédicos y hardware con el fin de sistematizar y automatizar procesos que aseguren la información del paciente, 
-            el seguimiento de la muestra y su resultado. Creada como persona jurídica desde el 2010 somos miembros de FEDESOFT, PARQUESOFT y pertenecemos a MARCACOLOMBIA TI</p>
+            <p><?= $about['p-1']?></p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 ">
             <br/>
-            <p class="text-right"><i class="fas fa-quote-left"></i> Saber que estábamos aportando un granito de arena a la salud del país es algo que nos llena de orgullo. <i class="fas fa-quote-right"></i></p><br/>
-            <p class="text-justify">Cuando lanzamos nuestra primera versión en el 2009
-            no imaginábamos el alcance y el impacto que podría llegar a tener en nuestros clientes, el asegurar la calidad del resultado que entregan a sus pacientes. 
-            Así comenzó nuestra historia. Poco a poco el mercado fue confiando en nuestra solucion y a hoy la ofrecemos en entidades públicas como privadas, en países como Colombia y Mexico. 
-            Nuestra visión es hacer de QHORTE la herramienta estándar en el diagnóstico de cáncer y continuar democratizando el acceso a un software de calidad en la modalidad SaaS
-            para pequeños laboratorios, como para grandes instituciones públicas y privadas y propender el uso de nuestra tecnología como herramienta de Teletrabajo para los profesionales de la salud 
-            de laboratorios de patología, citología cervical y biología molecular.</p>
+            <p class="text-right"><i class="fas fa-quote-left"></i><?= $about['p-2']?><i class="fas fa-quote-right"></i></p><br/>
+            <p class="text-justify"><?= $about['p-3']?></p>
           </div>
         </div>
       </div>
@@ -512,7 +515,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="container">
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto text-center">
-            <h2 class="title">Contáctenos</h2>
+            <h2 class="title"><?= $contact['title']?></h2>
             <h5 class="description"></h5>
           </div>
         </div>
@@ -525,10 +528,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                    <i class="fas fa-map-marker-alt"></i>
                   </div>
                   <div class="description">
-                    <h4 class="info-title">Encuentranos en nuestra oficina</h4>
-                    <p> Carrera 77 # 19-35 Torre 1 302<br>
-                    Bogotá, Colombia
-                    </p>
+                    <h4 class="info-title"><?= $contact['h4-1']?></h4>
+                    <p><?= $contact['p-1']?></p>
                   </div>
                 </div>
               </div>
@@ -540,11 +541,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <i class="fas fa-phone-alt"></i>
                   </div>
                   <div class="description">
-                    <h4 class="info-title">Llamanos</h4>
-                    <p>Atención comercial<br>
-                      +57 3155339530<br>
-                      Lun - Vie, 8:00-17:00
-                    </p>
+                    <h4 class="info-title"><?= $contact['h4-2']?></h4>
+                    <p><?= $contact['p-2']?></p>
                   </div>
                 </div>
               </div>
@@ -554,11 +552,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                    <i class="fas fa-headset"></i>
                   </div>
                   <div class="description">
-                    <h4 class="info-title">&nbsp;</h4>
-                    <p>Línea de soporte<br>
-                      +57 3228918451<br>
-                      Lun - Vie, 8:00-17:00
-                    </p>
+                    <h4 class="info-title"><?= $contact['h4-3']?></h4>
+                    <p><?= $contact['p-3']?></p>
                   </div>
                 </div>
               </div>
@@ -569,41 +564,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="card-body">
                 <div class="row">
                   <div class="col-sm-6">
-                    <label class="control-label">Nombres</label>
+                    <label class="control-label"><?= $contact['label-1']?></label>
                     <input type="text" id="customer_name" name="customer_name" class="form-control"/>
                   </div>
                   <div class="col-sm-6">
-                    <label class="control-label">Apellidos</label>
+                    <label class="control-label"><?= $contact['label-2']?></label>
                     <input type="text" id="customer_lastname" name="customer_lastname" class="form-control"/>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-sm-6">
-                    <label class="control-label">Correo electrónico</label>
+                    <label class="control-label"><?= $contact['label-3']?></label>
                     <input type="email" id="customer_email" name="customer_email" class="form-control"/>
                   </div>
                   <div class="col-sm-6">
-                    <label class="control-label">Telefono</label>
+                    <label class="control-label"><?= $contact['label-4']?></label>
                     <input type="text" id="customer_phone" name="customer_phone" class="form-control"/>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-sm-12">
-                    <label class="control-label">Su mensaje</label>
+                    <label class="control-label"><?= $contact['label-5']?></label>
                     <textarea id="customer_message" name="customer_message" class="form-control" rows="6"></textarea>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-sm-6">
-                     <button class="g-recaptcha btn btn-primary" id="EmailSend" data-size="invisible">Enviar mensaje</button>
+                     <button class="g-recaptcha btn btn-primary" id="EmailSend" data-size="invisible"><?= $contact['button-1']?></button>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-sm-12">
-                  Este sitio está protegido por reCAPTCHA y el Google 
-                  <a style="color: #ffb833;font-weight: bold;" href = "https://policies.google.com/privacy"> Política de privacidad </a> y 
-                  <a style="color: #ffb833;font-weight: bold;" href = "https://policies.google.com/terms"> Condiciones de servicio </a>
-                  </div>
+                  <div class="col-sm-12"><?= $contact['captcha']?></div>
                 </div>
               </div>
             </form>
@@ -618,8 +609,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="row">
         <div class="credits">
           <span class="copyright">© 
-          <script>document.write(new Date().getFullYear())</script>, hecho con <i class="fa fa-heart heart"></i> by TARGETSOFTDECOLOMBIA
-          </span>
+          <script>document.write(new Date().getFullYear())</script></i><?= $footer['madeby']?></span>
         </div>
       </div>
     </div>
