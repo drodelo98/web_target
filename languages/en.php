@@ -10,6 +10,8 @@ $nav = [
     'li4' => 'PRICING',
     'li5' => 'ABOUT US',
     'li6' => 'CONTACT US',
+    'li7_a-1' => 'Spanish',
+    'li7_a-2' => 'English',
 ];
 
 $carousel_page = [

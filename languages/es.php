@@ -10,6 +10,8 @@ $nav = [
     'li4' => 'PLANES',
     'li5' => 'NOSOTROS',
     'li6' => 'CONTÁCTENOS',
+    'li7_a-1' => 'Español',
+    'li7_a-2' => 'Ingles',
 ];
 
 $carousel_page = [

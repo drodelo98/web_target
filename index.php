@@ -80,8 +80,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <?= $_SESSION['lang']?>
                   </button>
                   <div class="dropdown-menu">
-                  <a class="dropdown-item" href="?lang=es">Español</a>
-                  <a class="dropdown-item" href="?lang=en">Ingles</a>
+                  <a class="dropdown-item" href="?lang=es"><?= $nav['li7_a-1']?></a>
+                  <a class="dropdown-item" href="?lang=en"><?= $nav['li7_a-2']?></a>
                   </div>
                   </div>
                   </li>
