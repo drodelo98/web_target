@@ -100,6 +100,6 @@ $contact = [
 ];
 
 $footer = [
-    'madeby' => ', hecho con <i class="fa fa-heart heart"></i> by TARGETSOFTDECOLOMBIA',
+    'madeby' => ', made with <i class="fa fa-heart heart"></i> by TARGETSOFTDECOLOMBIA',
 ]
 ?>
